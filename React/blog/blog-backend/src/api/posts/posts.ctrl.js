@@ -1,12 +1,12 @@
-import Post from '../../modules/post';
-/*
-    POST /api/posts
-    {
-        title: '제목',
-        body: '내용',
-        tags: ['태그1', '태그2']
-    }
- */
+import Post from '../../models/post';
+// /*
+//     POST /api/posts
+//     {
+//         title: '제목',
+//         body: '내용',
+//         tags: ['태그1', '태그2']
+//     }
+//  */
 export const write = async ctx => {
     const { title, body, tags } = ctx.request.body;
     const post = new Post({

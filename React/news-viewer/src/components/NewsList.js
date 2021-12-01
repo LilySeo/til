@@ -58,20 +58,20 @@ const NewsList = ({ category }) => {
 
 
 
-    // const onChange = useCallback( e=> {
-    //     setSword(e.target.value);
-    // }, [sword]);
-    //
-    // const onSubmit = useCallback(
-    //     e => {
-    //         onSearch(sword);
-    //         // setSword('');
-    //
-    //         e.preventDefault();
-    //     },
-    //     [onSearch, sword],
-    // )
-    const onChange = e => setSword(e.target.value);
+    const onChange = useCallback( e=> {
+        setSword(e.target.value);
+    }, [sword]);
+
+    const onSubmit = useCallback(
+        e => {
+            onSearch(sword);
+            // setSword('');
+
+            e.preventDefault();
+        },
+        [onSearch, sword],
+    )
+    // const onChange = e => setSword(e.target.value);
     const onClick = e => {
         // alert()
 
